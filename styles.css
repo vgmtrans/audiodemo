@@ -1,0 +1,286 @@
+:root {
+  --bg: #050709;
+  --bg-alt: #0f141a;
+  --text: #f4f4f4;
+  --muted: #a0a7b2;
+  --accent: #6fb1ff;
+  --accent-soft: rgba(111, 177, 255, 0.15);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: radial-gradient(circle at top, #192235 0, #050709 60%);
+  min-height: 100%;
+}
+
+/* Layout */
+
+.page-header {
+  padding: 2.5rem 1.25rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem 2.5rem;
+}
+
+.page-footer {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border-subtle);
+  padding: 1.5rem 1.25rem 2rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Header text */
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  letter-spacing: 0.03em;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Header links / GitHub buttons */
+
+.header-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(30, 44, 80, 0.95);
+  color: #fdfdfd;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 80ms ease;
+}
+
+
+/* System sections */
+
+.system-section {
+  margin-top: 2.25rem;
+}
+
+.system-heading {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.system-name {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/*.system-name::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 1px;
+  width: 3rem;
+  background: linear-gradient(
+    to right,
+    var(--accent),
+    rgba(111, 177, 255, 0)
+  );
+  margin-left: 0.75rem;
+}*/
+
+.system-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.system-note {
+  margin: -1.0rem 0 0.4rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  max-width: 36rem;
+}
+
+/* Track list: single column on small screens, two columns when wide enough */
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-subtle);
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.75rem;
+}
+
+@media (min-width: 720px) {
+  .track-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Track item */
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;              /* was 0.6rem */
+  padding: 0.55rem 0.15rem 0.55rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.track-label {
+  flex: 1;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Play button – fixed width, icon-only, slightly brighter */
+
+.play-button {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(25, 34, 60, 0.98); /* a bit brighter than before */
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  border-radius: 0;
+  color: var(--text);
+  cursor: pointer;
+  text-transform: none; /* icon only, no uppercase needed */
+  letter-spacing: 0;
+  width: 4.8rem; /* fixed width so ▶ / ⏸ don’t move things */
+  text-align: center;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 80ms ease;
+}
+
+.play-button:hover {
+  background: rgba(40, 54, 90, 1);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.play-button:active {
+  transform: translateY(1px);
+}
+
+.play-button[aria-pressed="true"] {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #020813; /* dark text for contrast on white */
+}
+
+/* Equalizer indicator (3 bars in a smaller square) */
+
+.eq {
+  width: 12px;               /* was 16px */
+  height: 12px;              /* was 16px */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-right: 0.2rem;      /* was 0.25rem */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.track-item.playing .eq {
+  opacity: 1;
+}
+
+.eq-bar {
+  display: block;
+  width: 2px;                /* narrower bars */
+  height: 100%;
+  background: #36da5f;
+  border-radius: 1px;
+  transform-origin: bottom;
+  animation: eq-bar 1.9s ease-in-out infinite; /* slower, smoother */
+}
+
+/* Different durations so they move independently, but all slower now */
+.eq-bar:nth-child(2) {
+  animation-duration: 1.7s;
+}
+.eq-bar:nth-child(3) {
+  animation-duration: 2.1s;
+}
+
+@keyframes eq-bar {
+  0% {
+    transform: scaleY(0.6);
+  }
+  25% {
+    transform: scaleY(0.9);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+  75% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.6);
+  }
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 600px) {
+  .track-item {
+    gap: 0.6rem;
+  }
+
+  .track-label {
+    font-size: 0.9rem;
+  }
+}
