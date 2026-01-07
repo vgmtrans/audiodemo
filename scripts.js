@@ -8,23 +8,23 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Actraiser",
-        file: "audio/snes/snes-actr.ogg",
+        file: "audio/snes/snes-actr.mp3",
       },
       {
         game: "Mega Man X",
-        file: "audio/snes/snes-mmx.ogg",
+        file: "audio/snes/snes-mmx.mp3",
       },
       {
         game: "Secret of Mana",
-        file: "audio/snes/snes-sd2.ogg",
+        file: "audio/snes/snes-sd2.mp3",
       },
       {
         game: "SimCity",
-        file: "audio/snes/snes-simcity.ogg",
+        file: "audio/snes/snes-simcity.mp3",
       },
       {
         game: "The Legend of Zelda: A Link to the Past",
-        file: "audio/snes/snes-loz3.ogg",
+        file: "audio/snes/snes-loz3.mp3",
       },
     ],
   },
@@ -33,23 +33,23 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Final Fantasy IX",
-        file: "audio/psx/psx-ff9.ogg",
+        file: "audio/psx/psx-ff9.mp3",
       },
       {
         game: "Final Fantasy Tactics",
-        file: "audio/psx/psx-fft.ogg",
+        file: "audio/psx/psx-fft.mp3",
       },
       {
         game: "Mega Man 8",
-        file: "audio/psx/psx-mm8.ogg",
+        file: "audio/psx/psx-mm8.mp3",
       },
       {
         game: "Parasite Eve",
-        file: "audio/psx/psx-parasiteeve.ogg",
+        file: "audio/psx/psx-parasiteeve.mp3",
       },
       {
         game: "Saga Frontier 2",
-        file: "audio/psx/psx-saga2.ogg",
+        file: "audio/psx/psx-saga2.mp3",
       }
     ],
   },
@@ -58,15 +58,15 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Clockwork Knight",
-        file: "audio/saturn/saturn-clockwork.ogg",
+        file: "audio/saturn/saturn-clockwork.mp3",
       },
       {
         game: "Nights into Dreams",
-        file: "audio/saturn/saturn-nights.ogg",
+        file: "audio/saturn/saturn-nights.mp3",
       },
       {
         game: "Panzer Dragoon II Zwei",
-        file: "audio/saturn/saturn-panzer2.ogg",
+        file: "audio/saturn/saturn-panzer2.mp3",
       },
     ],
   },
@@ -75,19 +75,19 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Final Fantasy X",
-        file: "audio/ps2/ps2-ffx.ogg",
+        file: "audio/ps2/ps2-ffx.mp3",
       },
       {
         game: "Final Fantasy X-2",
-        file: "audio/ps2/ps2-ffx2.ogg",
+        file: "audio/ps2/ps2-ffx2.mp3",
       },
       {
         game: "Front Mission 4",
-        file: "audio/ps2/ps2-fm4.ogg",
+        file: "audio/ps2/ps2-fm4.mp3",
       },
       {
         game: "Onimusha",
-        file: "audio/ps2/ps2-onimusha.ogg",
+        file: "audio/ps2/ps2-onimusha.mp3",
       }
     ],
   },
@@ -96,11 +96,11 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Castlevania: Dawn of Sorrow",
-        file: "audio/nds/nds-cdos.ogg",
+        file: "audio/nds/nds-cdos.mp3",
       },
       {
         game: "Contra 4",
-        file: "audio/nds/nds-contra4.ogg",
+        file: "audio/nds/nds-contra4.mp3",
       },
     ],
   },
@@ -109,15 +109,15 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Mystic Warriors",
-        file: "audio/konamigx/konamigx-mystwarr.ogg",
+        file: "audio/konamigx/konamigx-mystwarr.mp3",
       },
       {
         game: "Salamander 2",
-        file: "audio/konamigx/konamigx-salmndr2.ogg",
+        file: "audio/konamigx/konamigx-salmndr2.mp3",
       },
       {
         game: "Violent Storm",
-        file: "audio/konamigx/konamigx-viostorm.ogg",
+        file: "audio/konamigx/konamigx-viostorm.mp3",
       },
     ],
   },
@@ -127,15 +127,15 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Final Fight",
-        file: "audio/cps1/cps1-ffight.ogg",
+        file: "audio/cps1/cps1-ffight.mp3",
       },
       {
         game: "Street Fighter II",
-        file: "audio/cps1/cps1-sf2.ogg",
+        file: "audio/cps1/cps1-sf2.mp3",
       },
       {
         game: "Strider",
-        file: "audio/cps1/cps1-strider.ogg",
+        file: "audio/cps1/cps1-strider.mp3",
       },
     ],
   },
@@ -144,11 +144,11 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Super Street Fighter II",
-        file: "audio/cps2/cps2-ssf2.ogg",
+        file: "audio/cps2/cps2-ssf2.mp3",
       },
       {
         game: "Vampire Savior",
-        file: "audio/cps2/cps2-vsav.ogg",
+        file: "audio/cps2/cps2-vsav.mp3",
       },
     ],
   },
@@ -157,11 +157,11 @@ const AUDIO_LIBRARY = [
     examples: [
       {
         game: "Street Fighter III: 2nd Impact",
-        file: "audio/cps3/cps3-sfiii2.ogg",
+        file: "audio/cps3/cps3-sfiii2.mp3",
       },
       {
         game: "Street Fighter III: 3rd Strike",
-        file: "audio/cps3/cps3-sfiii3.ogg",
+        file: "audio/cps3/cps3-sfiii3.mp3",
       },
     ],
   },
